@@ -156,3 +156,70 @@ body {
 .navbar .nav ul li:last-child {
 	border-radius: 0 0 4px 4px;
 }
+
+.commonboard{
+	background-color: #00a1cb;
+}
+.border-head h3,.border-body p{
+	color: #ffffff;
+}
+.navbar-form .form-search{
+	border-radius:15px;
+	padding:0px 15px;
+	border:none;
+	height: 25px;
+	font-size: 13px;
+}
+.navbar-form .form-search:focus{
+	text-shadow:none;
+	box-shadow: none;
+	outline: 0;
+
+}
+.nav-collapse.pull-right div{
+	float: left;
+	position: relative;
+}
+.navbar-form span{
+	color:#66757f;
+	position: absolute;
+	top:16px;
+	right: 28px;
+	font-size: 13px;
+}
+.border-head{
+	height: 180px;
+}
+.checkbox.social{
+	padding-left:0px;
+}
+.checkbox.social .social{
+	top:4px;
+}
+.checkbox.social label:first-child{
+	width:100%;
+}
+.checkbox.social label,.checkbox.social input{
+	font-size: 13px;
+}
+.checkbox.social a{
+	float: right;
+}
+label input+label{
+	padding-left:0px !important;
+}
+.social-login{
+	padding-left: 30px;
+}
+.social-login-img{
+	position: absolute;
+	top: 50px;
+	left: 6px;
+	font-size: 16px;
+	color: lightslategrey;
+}
+.login-tab ul{
+	padding-left: 0px;
+}
+
+

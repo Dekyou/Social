@@ -1,4 +1,4 @@
-var socialApp = angular.module('socialApp', ['ui.router']);
+var socialApp = angular.module('socialApp', ['ui.router','ui.bootstrap']);
 
 
 /*socialApp.config(['$qProvider', function ($qProvider) {
@@ -19,24 +19,38 @@ socialApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/index',
             views: {
                 "": {
-                	templateUrl: 'console/templates/mainpage.html'
+                	templateUrl: 'console/templates/layout/indexpage.html'
                 },
 		        'navbar@index': {
 		            templateUrl: 'console/templates/navbar.html'
 		        },
-		        'leftmenu@index': {
-		            templateUrl: 'console/templates/menu/menuMain.html'
-		        },
 		        'container@index': {
-		            templateUrl: 'console/templates/container/containerMain.html'
+		            templateUrl: 'console/templates/container/containerIndex.html'
 		        }
               } 
         })
+        .state('technics', {
+            url: '/technics',
+            views: {
+                "": {
+                    templateUrl: 'console/templates/layout/mainpage.html'
+                },
+                'navbar@technics': {
+                    templateUrl: 'console/templates/navbar.html'
+                },
+                'leftmenu@technics': {
+                    templateUrl: 'console/templates/menu/menuMain.html'
+                },
+                'container@technics': {
+                    templateUrl: 'console/templates/container/containerMain.html'
+                }
+            }
+        })
         .state('angularJS',{
-        	url:'/index/technics/angularJS',
+        	url:'/technics/angularJS',
     		views:{
                 "": {
-                	templateUrl: 'console/templates/mainpage.html'
+                	templateUrl: 'console/templates/layout/mainpage.html'
                 },
 		        'navbar@angularJS': {
 		        	 templateUrl: 'console/templates/navbar.html'
