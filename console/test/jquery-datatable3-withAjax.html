@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<!-- 确保适当的绘制和触屏缩放，针对移动端 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 user-scalable=no 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。注意，这种方式我们并不推荐所有网站使用，还是要看你自己的情况而定！ -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.css">
+	
+	<link rel="stylesheet" type="text/css" href="../assets/jquery-data-table/css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="../assets/jquery-data-table/css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../assets/angularjs-datatable/css/angular-datatables.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../assets/bootstrap-datatable/css/datatables.bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="../assets/social/css/social-layout.css">
+	<link rel="stylesheet" type="text/css" href="../assets/social/css/social.css">
+	<title>angular-datatables</title>
+</head>
+<body ng-app="tableApp" ng-controller="tableCtrl">
+<div ng-controller="tableCtrl as showCase">
+    <table datatable="" dt-options="showCase.dtOptions" dt-columns="showCase.dtColumns" class="row-border hover"></table>
+</div>
+</body>
+ <script src="../assets/bootstrap/js/jquery.js"></script>
+ <script src="../assets/angularjs/angular.js"></script>
+ <script src="../assets/flatui/js/flat-ui.js"></script>
+ <script src="../assets/jquery-data-table/js/jquery.dataTables.js"></script>
+ <script src="../assets/angularjs-datatable/js/angular-datatables.js"></script>
+ <!-- <script src="../assets/bootstrap-datatable/js/angular-datatables.bootstrap.js"></script> -->
+<script>
+    var tableApp = angular.module('tableApp',['datatables'])
+        .controller('tableCtrl',function ($scope,DTOptionsBuilder,DTColumnBuilder) {
+            var vm = this;
+            vm.dtOptions = DTOptionsBuilder.fromSource('../data/angularDataTable3.json').withPaginationType('full_numbers');
+            vm.dtColumns = [
+                DTColumnBuilder.newColumn('id').withTitle('ID'),
+                DTColumnBuilder.newColumn('firstName').withTitle("FirstName"),
+                DTColumnBuilder.newColumn('lastName').withTitle("LastName")
+            ];
+        });
+</script>
+</html>

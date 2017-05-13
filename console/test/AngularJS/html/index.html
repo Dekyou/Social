@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Test</title>
+    <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.css">
+</head>
+<body ng-app="studyApp" ng-controller="studyCtrl">
+    <div class="container-fluid">
+        <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                   <div class="panel panel-default">
+                       <div class="panel-heading">
+                           Test One
+                       </div>
+                       <div class="panel-body">
+                           <input type="text" class="form-control" ng-model="expr" placeholder="Enter an expression">
+                           <h2 ng-bind="parsedValue"></h2>
+                       </div>
+                   </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Test Two
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <input type="text" class="form-control" ng-model="to" placeholder="Recipient">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="emailBody" id="emailBody" cols="30" rows="10" class="form-control" ng-model="emailBody"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <pre ng-bind="previewText"></pre>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+<script src="../../../assets/angularjs/angular.js"></script>
+<script src="../studyApp.js"></script>
+<script src="../services/testServcie.js"></script>
+<script src="../controller/studyController.js"></script>
+</html>

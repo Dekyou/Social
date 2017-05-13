@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.css">
+    <style>
+        .error{
+            background-color: #ef897e;
+        }
+    </style>
+    <title>AngualarJS Form Validate</title>
+</head>
+<body ng-app="filterApp" ng-controller="filterCtrl">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    Test Form Filter
+                </div>
+                <div class="panel-body">
+                    <form name="signupForm" ng-submit="signupForm()">
+                        <div class="form-group">
+                            <label for="userName">UserName</label>
+                            <input name="name" type="text" class="form-control" placeholder="Please input your name" ng-model="user.name" ng-minlength="3" ng-maxlength="10" required>
+                        </div>
+                        <div class="error" ng-messages="signupForm.name.$error">
+                            <small ng-message="required">
+                                Your name is required.
+                            </small>
+                            <small ng-message="minlength">
+                                Your name is required to be at least 3 characters.
+                            </small>
+                            <small ng-message="maxlength">
+                                Your name cannot be longer than 10 characters.
+                            </small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../assets/angularjs/angular.js"></script>
+<script src="../assets/angularjs/angular-messages.js"></script>
+<script>
+var filterApp = angular.module('filterApp',['ngMessages'])
+    .controller('filterCtrl',['$scope',function($scope){
+        $scope.user = {
+            number:12
+        }
+    }]);
+</script>
+</html>
