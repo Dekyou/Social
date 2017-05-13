@@ -24,7 +24,22 @@
                     </form>
                 </div>
                  <ul class="nav">
-                     <li><a href="javascript:;" ng-click="open('.social-login')">登陆</a></li>
+                     <li ng-click="nbCtrl.openRegOrLogin('.social-login')" ng-if="!nbCtrl.loginResult"><a href="javascript:;">登陆</a></li>
+                     <li><div ng-bind="nbCtrl.loginResult"></div></li>
+                     <li ng-if="nbCtrl.loginResult">
+                         <a href="javascript:;" class="social-user-info">
+                             <img alt="" class="img-circle social-user-img" src="console/assets/social/images/avatar.jpg">
+                             <span class="social-username">Dekyou</span>
+                         </a>
+                             <ul>
+                                 <li ng-click="nbCtrl.socialClick('Dekyou')"><a href="javascript:;"><i class="social-icon icon-user"></i>个人信息</a></li>
+                                 <li ng-click="nbCtrl.socialClick('Dekyou')"><a href="javascript:;"><i class="social-icon icon-envelope-open"></i>我的消息</a></li>
+                                 <li><a href="javascript:;"><i class="social-icon icon-logout"></i>退出</a></li>
+                             </ul>
+                     </li>
+                     <li ng-if="true">
+                         <a href="javascript:;"></a>
+                     </li>
                  </ul>
           </div>
 

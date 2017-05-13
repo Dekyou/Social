@@ -1,0 +1,3 @@
+socialApp.controller('mainCtrl',function(){
+
+});

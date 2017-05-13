@@ -3,9 +3,14 @@
         width:1190px;
     }
 }
+@media screen and (max-width: 1377px) {
+    .container-fluid {
+        width:1280px;
+    }
+}
  body {
  		background-color:#f6f6f6;
-        padding-top: 67px;
+        padding-top: 61px;
         padding-bottom: 40px;
       }
 #menu{
@@ -24,7 +29,7 @@
 }
 
 .container-index{
-    margin-top:-50px;
+    margin-top:-14px;
 }
 .border-head,.border-body{
     padding:20px 30px;

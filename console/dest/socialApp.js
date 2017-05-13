@@ -1,6 +1,7 @@
 var socialApp = angular.module('socialApp', ['ui.router','ui.bootstrap']);
 
 
+
 /*socialApp.config(['$qProvider', function ($qProvider) {
     $qProvider.errorOnUnhandledRejections(false);
 }]);
@@ -25,7 +26,7 @@ socialApp.config(function($stateProvider, $urlRouterProvider) {
 		            templateUrl: 'console/templates/navbar.html'
 		        },
 		        'container@index': {
-		            templateUrl: 'console/templates/container/containerIndex.html'
+		            templateUrl: 'console/templates/container/container-main.html'
 		        }
               } 
         })
@@ -33,7 +34,7 @@ socialApp.config(function($stateProvider, $urlRouterProvider) {
             url: '/technics',
             views: {
                 "": {
-                    templateUrl: 'console/templates/layout/mainpage.html'
+                    templateUrl: 'console/templates/layout/left-right-layout.html'
                 },
                 'navbar@technics': {
                     templateUrl: 'console/templates/navbar.html'
@@ -42,7 +43,7 @@ socialApp.config(function($stateProvider, $urlRouterProvider) {
                     templateUrl: 'console/templates/menu/menuMain.html'
                 },
                 'container@technics': {
-                    templateUrl: 'console/templates/container/containerMain.html'
+                    templateUrl: 'console/templates/container/container-technics.html'
                 }
             }
         })
@@ -50,7 +51,7 @@ socialApp.config(function($stateProvider, $urlRouterProvider) {
         	url:'/technics/angularJS',
     		views:{
                 "": {
-                	templateUrl: 'console/templates/layout/mainpage.html'
+                	templateUrl: 'console/templates/layout/left-right-layout.html'
                 },
 		        'navbar@angularJS': {
 		        	 templateUrl: 'console/templates/navbar.html'
@@ -78,7 +79,7 @@ socialApp.config(function($stateProvider, $urlRouterProvider) {
                     templateUrl: 'menu/menuMain.html'
                 },
                 'container': {
-                    templateUrl: 'container/containerMain.html'
+                    templateUrl: 'container/container-technics.html'
                 }
             }
         })
